@@ -1,0 +1,244 @@
+.welcom-sec {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.carousel-item{
+  height: 800px;
+}
+.welcom-sec img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.welcome-data {
+    position: relative;
+    left: 100px;
+    max-width: 600px;
+    color: #1d1e18;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media(max-width:825px){
+    .welcom-sec {
+       justify-content: center;
+    }
+    .welcome-data{
+        left: 0;
+        font-size: larger;
+    }
+}
+
+.abc {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+body {
+    background: #ebe9cf;
+}
+
+.wonders-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.wonders-section .hr {
+    border: 1px solid black;
+    width: 60%;
+    margin: 20px 0;
+}
+
+.wonder1 {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    overflow: hidden;
+    margin: 15px 0;
+    flex-wrap: wrap; 
+}
+
+.wonder1 .side1,
+.wonder1 .side2 {
+    width: 50%;
+    min-height: 350px;
+}
+
+.wonder1 .side1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wonder1 .side2 {
+    padding: 40px;
+    color: #13130d;
+    box-sizing: border-box;
+}
+
+.wonder1 .read-more-btn {
+    padding: 10px 30px;
+    border-radius: 30px;
+    background: transparent;
+    font-size: large;
+    outline: none;
+    border: 0.5px solid #13130d;
+    transition-duration: 300ms;
+    color: #13130d;
+}
+
+.read-more-btn:hover {
+    background-color: #13130d;
+    color: #ebe9cf;
+}
+
+@media (max-width: 1100px) {
+    .wonder1 {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wonder1 {
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    .wonder1 .side1,
+    .wonder1 .side2 {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .wonder1 .side2 {
+        padding: 25px;
+    }
+
+    .wonder1 .side1 {
+        order: -1;
+    }
+
+    .wonders-section .hr {
+        width: 90%;
+    }
+
+    .wonders-section h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .wonder1 .side2 {
+        padding: 15px;
+    }
+
+    .wonder1 .side2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .wonder1 .side2 p {
+        font-size: 0.9rem;
+    }
+
+    .read-more-btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+
+
+/* Animation Keyframes */  
+@keyframes fadeInUp {  
+    from {  
+      opacity: 0;  
+      transform: translateY(50px);  
+    }  
+    to {  
+      opacity: 1;  
+      transform: translateY(0);  
+    }  
+  }  
+  
+  @keyframes slideInLeft {  
+    from {  
+      opacity: 0;  
+      transform: translateX(-100px);  
+    }  
+    to {  
+      opacity: 1;  
+      transform: translateX(0);  
+    }  
+  }  
+  
+  @keyframes slideInRight {  
+    from {  
+      opacity: 0;  
+      transform: translateX(100px);  
+    }  
+    to {  
+      opacity: 1;  
+      transform: translateX(0);  
+    }  
+  }  
+  
+
+  .wonder1 {  
+    opacity: 0;  
+    transition: all 0.6s ease-out;  
+  }  
+  
+  .wonder1.animate {  
+    opacity: 1;  
+  }  
+  
+  .wonder1.animate .side1 {  
+    animation: slideInLeft 0.6s ease-out;  
+  }  
+  
+  .wonder1.animate .side2 {  
+    animation: slideInRight 0.6s ease-out;  
+  }  
+  
+
+  @media (max-width: 768px) {  
+    .wonder1.animate .side1,  
+    .wonder1.animate .side2 {  
+      animation: fadeInUp 0.6s ease-out;  
+    }  
+  }  
+.wonder1 {  
+    opacity: 0;  
+    transform: translateY(50px); 
+    transition: all 0.6s ease-out;  
+  }  
+  
+  .wonder1.animate {  
+    opacity: 1;  
+    transform: translateY(0);  
+  }  
+  
+  .wonder1:nth-child(1) { transition-delay: 0.1s; }  
+  .wonder1:nth-child(2) { transition-delay: 0.2s; }  
+  .wonder1:nth-child(3) { transition-delay: 0.3s; }  
+  .wonder1:nth-child(4) { transition-delay: 0.4s; }  
+
+  
